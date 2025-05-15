@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff; /* Converted from 0 0% 100% */
+    --foreground: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --card: #ffffff; /* Converted from 0 0% 100% */
+    --card-foreground: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --popover: #ffffff; /* Converted from 0 0% 100% */
+    --popover-foreground: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --primary: #1e90ff; /* Converted from 199, 96%, 32% */
+    --primary-foreground: #fff0f5; /* Converted from 0 85.7% 97.3% */
+    --secondary: #f5f5f5; /* Converted from 0 0% 96.1% */
+    --secondary-foreground: #171717; /* Converted from 0 0% 9% */
+    --muted: #f5f5f5; /* Converted from 0 0% 96.1% */
+    --muted-foreground: #737373; /* Converted from 0 0% 45.1% */
+    --accent: #f5f5f5; /* Converted from 0 0% 96.1% */
+    --accent-foreground: #171717; /* Converted from 0 0% 9% */
+    --destructive: #ff4d4d; /* Converted from 0 84.2% 60.2% */
+    --destructive-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --border: #e5e5e5; /* Converted from 0 0% 89.8% */
+    --input: #e5e5e5; /* Converted from 0 0% 89.8% */
+    --ring: #1e90ff; /* Converted from 199, 96%, 32% */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --foreground: #fafafa; /* Converted from 0 0% 98% */
+    --card: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --card-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --popover: #0a0a0a; /* Converted from 0 0% 3.9% */
+    --popover-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --primary: #23aaff; /* Converted from 199, 98%, 39% */
+    --primary-foreground: #fff0f5; /* Converted from 0 85.7% 97.3% */
+    --secondary: #262626; /* Converted from 0 0% 14.9% */
+    --secondary-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --muted: #262626; /* Converted from 0 0% 14.9% */
+    --muted-foreground: #a1a1a1; /* Converted from 0 0% 63.9% */
+    --accent: #262626; /* Converted from 0 0% 14.9% */
+    --accent-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --destructive: #9f1a1a; /* Converted from 0 62.8% 30.6% */
+    --destructive-foreground: #fafafa; /* Converted from 0 0% 98% */
+    --border: #262626; /* Converted from 0 0% 14.9% */
+    --input: #262626; /* Converted from 0 0% 14.9% */
+    --ring: #23aaff; /* Converted from 199, 98%, 39% */
+  }
+}
+
+@theme {
+  --color-primary: #23aaff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container {
+  @apply px-4 md:px-6 mx-auto max-w-7xl;
+}
+
+section {
+  overflow: hidden;
+}
+
+.mesh {
+
+  background: radial-gradient(at 0% 0%, #036fa16e 0px, transparent 50%), radial-gradient(at 100% 100%, #036fa16e 0px, transparent 50%);
+    
+}
+
+.mesh-2 {
+
+  background: radial-gradient(at 80.11853448275862% 91.875%, #028ac7 0px, transparent 50%), radial-gradient(at 26.13146551724138% 31.25%, #005a83 0px, transparent 50%), var(--primary);
+    
+}
