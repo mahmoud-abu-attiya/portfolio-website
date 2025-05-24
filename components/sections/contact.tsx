@@ -168,6 +168,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                        aria-label={`Link to ${link.href}`}
                       >
                         {link.icon}
                       </Link>

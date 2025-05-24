@@ -8,10 +8,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { href: "https://github.com/mahmoud-abu-attiya", icon: <Github className="h-5 w-5" /> },
-    { href: "https://linkedin.com/in/mahmoud-abu-attiya", icon: <Linkedin className="h-5 w-5" /> },
-    { href: "https://www.instagram.com/mahmoud_abu_attiya/", icon: <Instagram className="h-5 w-5" /> },
-    { href: "mailto:mahmoud.abuattiya106@gmail.com", icon: <Mail className="h-5 w-5" /> },
+    { name: "Github" ,href: "https://github.com/mahmoud-abu-attiya", icon: <Github className="h-5 w-5" /> },
+    { name: "Linkedin" ,href: "https://linkedin.com/in/mahmoud-abu-attiya", icon: <Linkedin className="h-5 w-5" /> },
+    { name: "Instagram" ,href: "https://www.instagram.com/mahmoud_abu_attiya/", icon: <Instagram className="h-5 w-5" /> },
+    { name: "Email" ,href: "mailto:mahmoud.abuattiya106@gmail.com", icon: <Mail className="h-5 w-5" /> },
   ]
 
   return (
@@ -32,6 +32,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label={`A link to Mahmoud ${link.name}`}
               >
                 {link.icon}
               </Link>
