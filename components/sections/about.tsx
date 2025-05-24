@@ -33,7 +33,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-6 gap-8 items-center">
           <div className="img col-span-2 hidden md:block relative h-full">
-            <div className="absolute z-10 w-full left-0 bottom-0 flex justify-center gap-4 items-center p-4">
+            {/* <div className="absolute z-10 w-full left-0 bottom-0 flex justify-center gap-4 items-center p-4">
               <Link
                 href="https://www.instagram.com/mida.dev/"
                 target="_blank"
@@ -41,7 +41,7 @@ const About = () => {
                 className="p-4 rounded-full bg-primary/50 backdrop-blur-sm text-primary/50 hover:scale-105 transition shadow-md">
                 <Instagram />
               </Link>
-            </div>
+            </div> */}
             <div className="relative rounded-xl h-full">
               <Image
                 src={AboutImage}
@@ -53,10 +53,10 @@ const About = () => {
 
           <div className="col-span-4">
             <div className="">
-              <h2 className="text-3xl md:text-4xl font-bold">
+              <h2 className="text-3xl md:text-4xl font-bold text-gradient">
                 About Me
               </h2>
-              <p className="text-lg leading-6 my-2">My Name is Mahmoud Abu-Attiya but you can call me <span className="text-primary font-bold">Mida</span>.I'm a frontend developer who loves making intuitive and beautiful interfaces out of most complex problems. My specialization is in developing responsive, fast, and accessible web apps with Next.js, React, TypeScript, and Tailwind CSS.</p>
+              <p className="text-lg leading-6 my-2">My Name is Mahmoud Abu-Attiya but you can call me <span className="text-primary font-bold">Mida</span>. I'm a frontend developer who loves making intuitive and beautiful interfaces out of most complex problems. My specialization is in developing responsive, fast, and accessible web apps with Next.js, React, TypeScript, and Tailwind CSS.</p>
 
               <p className="text-lg leading-6 my-2">What motivates me is writing clean code that works but also feels right in its use. Whether it's in a team setting or a feature build that I'm leading, I really care about seamless interfaces that take the experience to a step higher.</p>
 

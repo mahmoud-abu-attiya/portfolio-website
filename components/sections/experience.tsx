@@ -6,43 +6,30 @@ const Experience = () => {
 
   const experiences = [
     {
-      position: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      date: "2021 - Present",
+      position: "Frontend Developer",
+      company: "Wesam Elagah (Full time REMOTE)",
+      date: ["APR 2023 - OCT 2023"],
       description:
-        "Led the development of responsive web applications using React and Next.js. Implemented state management with Redux and Context API. Collaborated with designers to create pixel-perfect UI components.",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+        "Refactored legacy frontend codebases using Next.js, reducing technical debt and improving maintainability. Integrated RESTful APIs and collaborated closely with backend engineers to ensure accurate data flow and error handling. Enhanced UX and scalability by implementing responsive layouts, Performance, and SEO-friendly routing.",
+      skills: ["Next.js", "Tailwind CSS", "REST API", "JavaScript", "Vercel"],
     },
     {
       position: "Frontend Developer",
-      company: "Digital Innovations",
-      date: "2019 - 2021",
+      company: "Orizon PR & Marketing",
+      date: [ 
+        "JUN 2022 - OCT 2023 (Freelance REMOTE)",
+        "JUN 2021 - JUN 2022 (Full time REMOTE)" 
+      ],
       description:
-        "Developed and maintained multiple client websites. Implemented responsive designs and ensured cross-browser compatibility. Worked with REST APIs and integrated third-party services.",
-      skills: ["JavaScript", "React", "CSS3", "REST API"],
-    },
-    {
-      position: "Web Developer",
-      company: "Creative Agency",
-      date: "2017 - 2019",
-      description:
-        "Created responsive websites for various clients. Collaborated with the design team to implement UI/UX designs. Maintained existing websites and implemented new features.",
-      skills: ["HTML5", "CSS3", "JavaScript", "jQuery"],
-    },
-    {
-      position: "Junior Developer",
-      company: "Startup Hub",
-      date: "2016 - 2017",
-      description:
-        "Assisted in the development of web applications. Learned modern web development practices and tools. Participated in code reviews and team meetings.",
-      skills: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    },
+        "Translated Figma and PSD designs into fully responsive, cross-browser-compatible web pages using HTML, SCSS, and JS. Delivered 10+ client-facing websites on time by maintaining agile communication with designers and backend teams.",
+      skills: ["HTML", "JavaScript", "React", "Next.js", "CSS3", "REST API", "Bootstrap", "Tailwind CSS", "Vercel"],
+    }
   ]
 
   return (
     <section id="experience" className="section-padding">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">
         Experience
         </h2>
 
@@ -70,10 +57,12 @@ const Experience = () => {
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <span>{exp.company}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      {exp.date.map((date, i) => 
+                      (<div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Calendar className="h-3 w-3" />
-                        <span>{exp.date}</span>
-                      </div>
+                        <span key={i} className="block">{date}</span>
+                      </div>)
+                    )}
                     </CardHeader>
                     <CardContent>
                       <p className="mb-4">{exp.description}</p>

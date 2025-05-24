@@ -8,8 +8,8 @@ const Footer = () => {
   const socialLinks = [
     { href: "https://github.com/mahmoud-abu-attiya", icon: <Github className="h-5 w-5" /> },
     { href: "https://linkedin.com/in/mahmoud-abu-attiya", icon: <Linkedin className="h-5 w-5" /> },
-    { href: "https://twitter.com/mahmoud_abuatya", icon: <Instagram className="h-5 w-5" /> },
-    { href: "mailto:mahmoud.abuattiya@gmail.com", icon: <Mail className="h-5 w-5" /> },
+    { href: "https://www.instagram.com/mahmoud_abu_attiya/", icon: <Instagram className="h-5 w-5" /> },
+    { href: "mailto:mahmoud.abuattiya106@gmail.com", icon: <Mail className="h-5 w-5" /> },
   ]
 
   return (

@@ -11,79 +11,66 @@ const Projects = () => {
     id: number
     title: string
     description: string
-    fullDescription: string
     image: string
     technologies: string[]
     liveUrl: string
-    githubUrl: string
+    githubUrl?: string
   }
 
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "A full-featured online shopping platform with cart and checkout functionality.",
-      fullDescription:
-        "A comprehensive e-commerce solution built with Next.js and Tailwind CSS. Features include product listings, search functionality, shopping cart, user authentication, and secure checkout process. The application is fully responsive and optimized for all devices.",
-      image: "/project_dg-menu.png?height=400&width=600",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Stripe"],
-      liveUrl: "https://example.com/ecommerce",
-      githubUrl: "https://github.com/username/ecommerce",
+      title: "DG Menu",
+      description: "A sleek platform that lets restaurants create customizable digital menus, generate QR codes, and manage items with ease—all in one place.",
+      image: "/Projects/dg-menu.png?height=380&width=600",
+      technologies: ["Next.js", "i18n", "TypeScript", "Tailwind CSS", "Context API"],
+      liveUrl: "https://dg-menu.vercel.app/?lang=en",
+      githubUrl: "https://github.com/mahmoud-abu-attiya/dg-menu",
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A productivity app for managing tasks, projects, and deadlines.",
-      fullDescription:
-        "A task management application that helps users organize their work and increase productivity. Features include task creation, project categorization, deadline tracking, and progress visualization. The app includes a drag-and-drop interface for easy task management.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["React", "TypeScript", "Material UI", "Firebase", "React DnD"],
-      liveUrl: "https://example.com/taskmanager",
-      githubUrl: "https://github.com/username/taskmanager",
+      title: "Stalker Rat",
+      description: "An anonymous feedback platform that helps you discover your strengths and weaknesses through confidential messages from friends, family, and coworkers",
+      image: "/Projects/stalker-rat.png?height=380&width=600",
+      technologies: ["Next.js", "JavaScript", "Tailwind CSS"],
+      liveUrl: "https://staker-rat-v2.vercel.app/",
+      githubUrl: "https://github.com/mahmoud-abu-attiya/staker-rat-v2",
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Real-time weather information with forecasts and interactive maps.",
-      fullDescription:
-        "A weather dashboard that provides real-time weather information and forecasts for locations worldwide. The app features interactive maps, temperature graphs, and detailed weather conditions. Users can save favorite locations and receive weather alerts.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["React", "Chart.js", "OpenWeatherMap API", "Leaflet", "Styled Components"],
-      liveUrl: "https://example.com/weather",
-      githubUrl: "https://github.com/username/weather",
+      title: "Lama E-Commerce",
+      description: "Lama is a modern e-commerce platform offering seasonal sales and stylish fashion products for men and women.",
+      image: "/Projects/lama.png?height=380&width=600",
+      technologies: ["Next.js", "Zustand", "TypeScript", "WIX API", "Tailwind CSS"],
+      liveUrl: "https://lama-beta-seven.vercel.app/",
+      githubUrl: "https://github.com/mahmoud-abu-attiya/next-ecommerce",
     },
     {
       id: 4,
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for tracking social media performance.",
-      fullDescription:
-        "A comprehensive dashboard for tracking and analyzing social media performance across multiple platforms. Features include engagement metrics, follower growth, content performance, and customizable reporting. The dashboard provides actionable insights to improve social media strategy.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts", "Social Media APIs"],
-      liveUrl: "https://example.com/socialdashboard",
-      githubUrl: "https://github.com/username/socialdashboard",
+      title: "Brainwave - AI Platform",
+      description: "An AI-powered chat app that boosts productivity and creativity through smart automation, seamless integrations, and intuitive user interaction.",
+      image: "/Projects/brainwave.png?height=380&width=600",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      liveUrl: "https://beack.vercel.app/",
+      githubUrl: "https://github.com/mahmoud-abu-attiya/beack",
     },
     {
       id: 5,
-      title: "Recipe Finder",
-      description: "Search and discover recipes based on ingredients and dietary preferences.",
-      fullDescription:
-        "A recipe finder application that allows users to search for recipes based on available ingredients, dietary restrictions, and meal preferences. The app provides detailed cooking instructions, nutritional information, and user reviews. Users can save favorite recipes and create meal plans.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["React", "CSS Modules", "Spoonacular API", "Context API", "PWA"],
-      liveUrl: "https://example.com/recipefinder",
-      githubUrl: "https://github.com/username/recipefinder",
+      title: "Arab center",
+      description: "A bilingual website for the Arab Center showcasing training programs, events, and resources to enhance educational leadership across the Gulf States.",
+      image: "/Projects/center.png?height=380&width=600",
+      technologies: ["Next.js", "Axios", "Redux Toolkit", "Tailwind CSS"],
+      liveUrl: "https://arab-centre.vercel.app/",
+      // githubUrl: "https://github.com/mahmoud-abu-attiya/arab-centre",
     },
     {
       id: 6,
-      title: "Portfolio Website",
-      description: "Personal portfolio website showcasing skills and projects.",
-      fullDescription:
-        "A personal portfolio website built with Next.js and Tailwind CSS. The website features a responsive design, dark mode support, and smooth animations. It showcases skills, experience, and projects in an elegant and user-friendly interface.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "i18n"],
-      liveUrl: "https://example.com/portfolio",
-      githubUrl: "https://github.com/username/portfolio",
+      title: "Nees Dashboard",
+      description: "An interactive admin dashboard providing real-time analytics, project tracking, and team performance insights for business management.",
+      image: "/Projects/nees.png?height=380&width=600",
+      technologies: ["React", "JavaScript", "Matiral UI"],
+      liveUrl: "https://nees.vercel.app/dashboard",
+      githubUrl: "https://github.com/mahmoud-abu-attiya/dashboard",
     },
   ]
 
@@ -100,7 +87,7 @@ const Projects = () => {
               key={project.id}
               className="border-2 border-primary transition-all group mesh-2 rounded-xl"
             >
-              <div className="relative h-48 overflow-hidden mx-4 -mt-4 rounded-lg shadow-lg">
+              <div className="relative h-44 overflow-hidden mx-4 -mt-4 rounded-lg shadow-lg">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -118,27 +105,39 @@ const Projects = () => {
                     </Badge>
                   ))}
                   {project.technologies.length > 3 && (
-                    <Badge variant="outline">+{project.technologies.length - 3}</Badge>
+                    <Badge variant="secondary">+{project.technologies.length - 3}</Badge>
                   )}
                 </div>
               </CardContent>
-              <CardFooter className="px-6 pb-6 pt-0 flex gap-4 items-center">
+              <CardFooter className="px-6 pb-6 pt-0 flex gap-4 items-center mt-auto">
                 <Button asChild className="bg-white text-primary rounded-lg grow hover:opacity-90 hover:bg-white">
                   <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="rounded-lg grow hover:opacity-90 hover:bg-black">
+                {project.githubUrl ? (
+                  <Button asChild variant="outline" className="rounded-lg grow hover:opacity-90 bg-slate-900 border-slate-700 text-white hover:bg-slate-900 hover:text-white">
                   <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" />
                     Source Code
                   </Link>
-                </Button>
+                  </Button>
+                ) : (
+                  <Button disabled variant="outline" title="The source code is privet" className="rounded-lg grow hover:opacity-90 bg-slate-900 border-slate-700 text-white hover:bg-slate-900 hover:text-white">
+                  <Github className="h-4 w-4 mr-2" />
+                  Source Code
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
         </div>
+        <Button asChild variant="outline" className="rounded-lg mt-10 mx-auto block w-fit">
+          <Link href={"https://github.com/mahmoud-abu-attiya?tab=repositories"} target="_blank" rel="noopener noreferrer">
+            See more
+          </Link>
+        </Button>
       </div>
     </section>
   )

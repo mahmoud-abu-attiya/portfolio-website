@@ -15,10 +15,10 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 max-w-3xl mx-auto">
           <div className="flex-1">
           <p className="text-muted-foreground mb-6 uppercase tracking-widest">frontend developer</p>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
             Crafting seamless digital experiences with passion and precision. Bridging the gap between code and creativity.
             </h1>
-            <p className="text-muted-foreground text-lg mb-6">I am Mahmoud Abu-Attiya a passionate Frontend Developer with experience in building responsive and interactive web applications.</p>
+            <p className="text-muted-foreground text-lg mb-6">Mahmoud Abu-Attiya a passionate Frontend Developer with experience in building responsive and interactive web applications.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg">
                 <Link href="#contact">Contact</Link>
