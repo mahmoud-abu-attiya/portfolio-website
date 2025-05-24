@@ -1,6 +1,8 @@
 
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import Logo from "/public/logo.svg"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -16,8 +18,9 @@ const Footer = () => {
     <footer className="bg-muted py-8">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-start">
-            <h3 className="text-lg font-bold text-primary">Mahmoud Abu-Attiya</h3>
+          <div className="text-center md:text-start flex flex-col items-center md:items-start">
+              <Image src={Logo} alt="Logo" width={40} height={40} className="inline-block" />
+              <span className="font-bold text-primary mt-2">Mahmoud Abu-Attiya</span>
             <p className="text-sm text-muted-foreground">Frontend Developer</p>
           </div>
 

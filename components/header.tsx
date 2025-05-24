@@ -5,6 +5,8 @@ import { ModeToggle } from "./mode-toggle"
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
 import Link from "next/link"
+import logo from "/public/logo.svg"
+import Image from "next/image"
 
 const Header = () => {
   // const [isScrolled, setIsScrolled] = useState(false)
@@ -44,7 +46,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between h-14 md:h-16">
         <Link href="/" className="text-xl font-bold text-primary">
-          Mahmoud
+          <Image src={logo} alt="Logo" width={40} height={40} className="inline-block mr-2" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -57,7 +59,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2">
           <ModeToggle />
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Button variant="ghost" size="icon" className="md:hidden" aria-label="Toggle menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>

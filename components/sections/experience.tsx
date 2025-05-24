@@ -35,19 +35,23 @@ const Experience = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`relative flex items-center ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
+                className={`
+                  relative flex flex-col md:flex-row 
+                  ${index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"}
+                  items-stretch md:items-center
+                `}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
 
                 {/* Content */}
-                <div className="w-1/2 px-6">
+                <div className="w-full md:w-1/2 px-0 md:px-6 mb-6 md:mb-0">
                   <Card>
                     <CardHeader className="pb-2">
                       <div className="flex items-center gap-2 mb-1">
@@ -58,9 +62,9 @@ const Experience = () => {
                         <span>{exp.company}</span>
                       </div>
                       {exp.date.map((date, i) => 
-                      (<div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      (<div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Calendar className="h-3 w-3" />
-                        <span key={i} className="block">{date}</span>
+                        <span className="block">{date}</span>
                       </div>)
                     )}
                     </CardHeader>
@@ -78,7 +82,7 @@ const Experience = () => {
                 </div>
 
                 {/* Empty space for the other side */}
-                <div className="w-1/2"></div>
+                <div className="hidden md:block w-1/2"></div>
               </div>
             ))}
           </div>

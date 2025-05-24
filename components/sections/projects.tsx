@@ -111,14 +111,14 @@ const Projects = () => {
               </CardContent>
               <CardFooter className="px-6 pb-6 pt-0 flex gap-4 items-center mt-auto">
                 <Button asChild className="bg-white text-primary rounded-lg grow hover:opacity-90 hover:bg-white">
-                  <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Link href={project.liveUrl} aria-label={`View ${project.title} live demo.`} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Link>
                 </Button>
                 {project.githubUrl ? (
                   <Button asChild variant="outline" className="rounded-lg grow hover:opacity-90 bg-slate-900 border-slate-700 text-white hover:bg-slate-900 hover:text-white">
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Link href={project.githubUrl} aria-label={`Got to github to see ${project.title} source code.`} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" />
                     Source Code
                   </Link>
@@ -135,7 +135,7 @@ const Projects = () => {
         </div>
         <Button asChild variant="outline" className="rounded-lg mt-10 mx-auto block w-fit">
           <Link href={"https://github.com/mahmoud-abu-attiya?tab=repositories"} target="_blank" rel="noopener noreferrer">
-            See more
+            More Projects
           </Link>
         </Button>
       </div>

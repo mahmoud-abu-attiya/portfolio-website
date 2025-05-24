@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Nunito } from "next/font/google"
+import { Toaster } from "@/components/ui/toaster"
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
               <Header />
               {children}
+              <Toaster />
               <Footer />
           </ThemeProvider>
       </body>
