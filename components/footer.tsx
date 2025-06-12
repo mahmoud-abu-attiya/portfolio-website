@@ -9,7 +9,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "Github" ,href: "https://github.com/mahmoud-abu-attiya", icon: <Github className="h-5 w-5" /> },
-    { name: "Linkedin" ,href: "https://linkedin.com/in/mahmoud-abu-attiya", icon: <Linkedin className="h-5 w-5" /> },
+    { name: "Linkedin" ,href: "https://www.linkedin.com/in/mahmoud-abu-attiya-978496210/", icon: <Linkedin className="h-5 w-5" /> },
     { name: "Instagram" ,href: "https://www.instagram.com/mahmoud_abu_attiya/", icon: <Instagram className="h-5 w-5" /> },
     { name: "Email" ,href: "mailto:mahmoud.abuattiya106@gmail.com", icon: <Mail className="h-5 w-5" /> },
   ]
