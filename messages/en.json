@@ -1,0 +1,143 @@
+{
+  "Header": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Career",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "role": "frontend developer",
+    "title": "Crafting seamless digital experiences with passion and precision. Bridging the gap between code and creativity.",
+    "subtitle": "Mahmoud Abu-Attiya a passionate Frontend Developer with experience in building responsive and interactive web applications.",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "Footer": {
+    "role": "Frontend Developer",
+    "rights": "All rights reserved."
+  },
+  "Experience": {
+    "title": "Career Timeline",
+    "description": "Here is a summary of my professional journey.",
+    "military": {
+      "title": "Military Service",
+      "started": "Started at",
+      "completed": "Completed at"
+    },
+    "itp": {
+      "position": "Intensive Training Program (ITP)",
+      "company": "Information Technology Institute (ITI). Damanhor Branch. \n Front-End & Mobile Cross-Platform development track.",
+      "description": "Led the development of Planora (Graduation Project), a web platform that helps users discover, manage, and book events. Built key features including ticketing, QR code generation, and an AI-powered chat experience using React, while coordinating the team and ensuring high-quality delivery."
+    },
+    "wesam": {
+      "position": "Frontend Developer",
+      "company": "Wesam Elagah (Full time REMOTE)",
+      "description": "Refactored legacy frontend codebases using Next.js, reducing technical debt and improving maintainability. Integrated RESTful APIs and collaborated closely with backend engineers to ensure accurate data flow and error handling. Enhanced UX and scalability by implementing responsive layouts, Performance, and SEO-friendly routing."
+    },
+    "orizon": {
+      "position": "Frontend Developer",
+      "company": "Orizon PR & Marketing",
+      "description": "Translated Figma and PSD designs into fully responsive, cross-browser-compatible web pages using HTML, SCSS, and JS. Delivered 10+ client-facing websites on time by maintaining agile communication with designers and backend teams."
+    }
+  },
+  "Skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "ui_frameworks": "UI Frameworks",
+      "tools": "Tools",
+      "version_control": "Version Control",
+      "i18n": "Internationalization",
+      "performance": "Performance",
+      "design": "Design",
+      "architecture": "Architecture"
+    },
+    "items": {
+      "responsive": "Responsive Design",
+      "mobile_first": "Mobile First",
+      "ui_ux": "UI/UX Principles",
+      "accessibility": "Accessibility",
+      "component_design": "Component Design",
+      "state_management": "State Management",
+      "clean_code": "Clean Code",
+      "design_patterns": "Design Patterns"
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "live_demo": "Live Demo",
+    "source_code": "Source Code",
+    "private_code": "The source code is private",
+    "more_projects": "More Projects on Github",
+    "items": {
+      "dg_menu": {
+        "title": "DG Menu",
+        "description": "A sleek platform that lets restaurants create customizable digital menus, generate QR codes, and manage items with ease—all in one place."
+      },
+      "stalker_rat": {
+        "title": "Stalker Rat",
+        "description": "An anonymous feedback platform that helps you discover your strengths and weaknesses through confidential messages from friends, family, and coworkers"
+      },
+      "lama": {
+        "title": "Lama E-Commerce",
+        "description": "Lama is a modern e-commerce platform offering seasonal sales and stylish fashion products for men and women."
+      },
+      "brainwave": {
+        "title": "Brainwave - AI Platform",
+        "description": "An AI-powered chat app that boosts productivity and creativity through smart automation, seamless integrations, and intuitive user interaction."
+      },
+      "arab_center": {
+        "title": "Arab center",
+        "description": "A bilingual website for the Arab Center showcasing training programs, events, and resources to enhance educational leadership across the Gulf States."
+      },
+      "nees": {
+        "title": "Nees Dashboard",
+        "description": "An interactive admin dashboard providing real-time analytics, project tracking, and team performance insights for business management."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "social": "Social Media"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "placeholder_name": "John Doe",
+      "placeholder_email": "example@email.com",
+      "placeholder_message": "Let's get in touch!",
+      "submit": "Send",
+      "loading": "Loading..."
+    },
+    "validation": {
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "email_invalid": "Email is invalid",
+      "message_required": "Message is required"
+    },
+    "toast": {
+      "success_title": "Message sent successfully!",
+      "validation_failed": "Form validation failed",
+      "error_sending": "Error sending message. Please try again."
+    }
+  },
+  "About": {
+    "title": "About Me",
+    "intro": "My Name is Mahmoud Abu-Attiya but you can call me <span>Mida</span>. I'm a frontend developer who loves making intuitive and beautiful interfaces out of most complex problems. My specialization is in developing responsive, fast, and accessible web apps with Next.js, React, TypeScript, and Tailwind CSS.",
+    "motivation": "What motivates me is writing clean code that works but also feels right in its use. Whether it's in a team setting or a feature build that I'm leading, I really care about seamless interfaces that take the experience to a step higher.",
+    "highlights_title": "Highlights:",
+    "highlights": [
+      "Built and launched several modern UIs with Next.js performance-oriented and scalable libraries.",
+      "Developed a digital menu platform for restaurants with dynamic theming, QR code generation, and item management capabilities.",
+      "Highly passionate about neat architecture, reusable components, and pixel-pushing precision.",
+      "I usually like to catch up on football, discover current UI trends, and learn something new to keep up with this fast-paced industry."
+    ],
+    "image_alt": "About Me, Frontend Developer | React.js | Next.js | TypeScript | Tailwind CSS | Passionate About UI/UX & SEO & Performance"
+  }
+}

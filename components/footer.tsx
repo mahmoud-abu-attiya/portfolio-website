@@ -3,9 +3,11 @@ import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "/public/logo.svg"
+import { useTranslations } from "next-intl"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const t = useTranslations("Footer")
 
   const socialLinks = [
     { name: "Github" ,href: "https://github.com/mahmoud-abu-attiya", icon: <Github className="h-5 w-5" /> },
@@ -21,7 +23,7 @@ const Footer = () => {
           <div className="text-center md:text-start flex flex-col items-center md:items-start">
               <Image src={Logo} alt="Logo" width={40} height={40} className="inline-block" />
               <span className="font-bold text-primary mt-2">Mahmoud Abu-Attiya</span>
-            <p className="text-sm text-muted-foreground">Frontend Developer</p>
+            <p className="text-sm text-muted-foreground">{t("role")}</p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -42,7 +44,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-4 border-t border-border text-center text-sm text-muted-foreground">
           <p>
-            &copy; {currentYear} Mahmoud Abu-Attiya. Frontend.
+            &copy; {currentYear} Mahmoud Abu-Attiya. {t("rights")}
           </p>
         </div>
       </div>

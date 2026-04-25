@@ -5,7 +5,13 @@ import Experience from "@/components/sections/experience"
 import Projects from "@/components/sections/projects"
 import Contact from "@/components/sections/contact"
 
-export default function Home() {
+export default async function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
   return (
     <main className="min-h-screen">
       <Hero />

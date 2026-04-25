@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/routing"
+import { useTranslations } from "next-intl"
 
 const Hero = () => {
+  const t = useTranslations("Hero");
 
   return (
     <section className="min-h-screen flex items-center justify-center text-center py-16 mesh">
@@ -14,17 +15,17 @@ const Hero = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 max-w-3xl mx-auto">
           <div className="flex-1">
-          <p className="text-muted-foreground mb-6 uppercase tracking-widest">frontend developer</p>
+          <p className="text-muted-foreground mb-6 uppercase tracking-widest">{t("role")}</p>
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-            Crafting seamless digital experiences with passion and precision. Bridging the gap between code and creativity.
+              {t("title")}
             </h1>
-            <p className="text-muted-foreground text-lg mb-6">Mahmoud Abu-Attiya a passionate Frontend Developer with experience in building responsive and interactive web applications.</p>
+            <p className="text-muted-foreground text-lg mb-6">{t("subtitle")}</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="#contact">Contact</Link>
+                <Link href="#contact">{t("contact")}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="#projects">Projects</Link>
+                <Link href="#projects">{t("projects")}</Link>
               </Button>
             </div>
           </div>

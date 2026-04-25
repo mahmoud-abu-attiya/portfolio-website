@@ -1,36 +1,78 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Briefcase, Calendar } from "lucide-react"
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Briefcase, Calendar, ShieldEllipsis } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Experience = () => {
+  const t = useTranslations("Experience");
 
   const experiences = [
     {
-      position: "Frontend Developer",
-      company: "Wesam Elagah (Full time REMOTE)",
+      position: t("itp.position"),
+      company: t("itp.company"),
+      date: ["JUL 2025 - DEC 2025"],
+      description: t("itp.description"),
+      skills: [
+        "Next.js",
+        "Tailwind CSS",
+        "REST API",
+        "JavaScript",
+        "Vercel",
+        "Flutter",
+        "React Native",
+        "TypeScript",
+        "Superbase",
+        "Redux",
+        "AI Integrations",
+        "Expo",
+        "Bootstrap",
+        "Material UI",
+        "Figma",
+        "Git",
+        "GitHub",
+      ],
+    },
+    {
+      position: "Military",
+      company: "",
+      date: [""],
+      description: "",
+      skills: [],
+    },
+    {
+      position: t("wesam.position"),
+      company: t("wesam.company"),
       date: ["APR 2023 - OCT 2023"],
-      description:
-        "Refactored legacy frontend codebases using Next.js, reducing technical debt and improving maintainability. Integrated RESTful APIs and collaborated closely with backend engineers to ensure accurate data flow and error handling. Enhanced UX and scalability by implementing responsive layouts, Performance, and SEO-friendly routing.",
+      description: t("wesam.description"),
       skills: ["Next.js", "Tailwind CSS", "REST API", "JavaScript", "Vercel"],
     },
     {
-      position: "Frontend Developer",
-      company: "Orizon PR & Marketing",
-      date: [ 
+      position: t("orizon.position"),
+      company: t("orizon.company"),
+      date: [
         "JUN 2022 - OCT 2023 (Freelance REMOTE)",
-        "JUN 2021 - JUN 2022 (Full time REMOTE)" 
+        "JUN 2021 - JUN 2022 (Full time REMOTE)",
       ],
-      description:
-        "Translated Figma and PSD designs into fully responsive, cross-browser-compatible web pages using HTML, SCSS, and JS. Delivered 10+ client-facing websites on time by maintaining agile communication with designers and backend teams.",
-      skills: ["HTML", "JavaScript", "React", "Next.js", "CSS3", "REST API", "Bootstrap", "Tailwind CSS", "Vercel"],
-    }
-  ]
+      description: t("orizon.description"),
+      skills: [
+        "HTML",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "CSS3",
+        "REST API",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Vercel",
+      ],
+    },
+  ];
 
   return (
     <section id="experience" className="section-padding">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient">
-        Experience
+          {t("title")}
         </h2>
 
         <div className="relative">
@@ -53,31 +95,65 @@ const Experience = () => {
                 {/* Content */}
                 <div className="w-full md:w-1/2 px-0 md:px-6 mb-6 md:mb-0">
                   <Card>
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Briefcase className="h-4 w-4 text-primary" />
-                        <h3 className="text-xl font-bold">{exp.position}</h3>
-                      </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <span>{exp.company}</span>
-                      </div>
-                      {exp.date.map((date, i) => 
-                      (<div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="h-3 w-3" />
-                        <span className="block">{date}</span>
-                      </div>)
+                    {exp.position !== "Military" ? (
+                      <>
+                        <CardHeader className="pb-2">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Briefcase className="h-4 w-4 text-primary" />
+                            <h3 className="text-xl font-bold">
+                              {exp.position}
+                            </h3>
+                          </div>
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <span className="whitespace-pre-line">{exp.company}</span>
+                          </div>
+                          {exp.date.map((date, i) => (
+                            <div
+                              key={i}
+                              className="flex items-center gap-2 text-sm text-muted-foreground"
+                            >
+                              <Calendar className="h-3 w-3" />
+                              <span className="block">{date}</span>
+                            </div>
+                          ))}
+                        </CardHeader>
+                        <CardContent>
+                          <p className="mb-4">{exp.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, skillIndex) => (
+                              <Badge key={skillIndex} variant="outline">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </>
+                    ) : (
+                      <Card className="flex">
+                        <CardHeader className="">
+                          <div className="flex items-center gap-2 mb-1">
+                            <ShieldEllipsis className="h-4 w-4 text-primary" />
+                            <h3 className="text-xl font-bold">
+                              {t("military.title")}
+                            </h3>
+                          </div>
+                          <div className="flex gap-5 flex-wrap">
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Calendar className="h-3 w-3" />
+                              <span className="block">
+                                {t("military.started")}: OCT 2023
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <Calendar className="h-3 w-3" />
+                              <span className="block">
+                                {t("military.completed")}: DEC 2024
+                              </span>
+                            </div>
+                          </div>
+                        </CardHeader>
+                      </Card>
                     )}
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-4">{exp.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill, skillIndex) => (
-                          <Badge key={skillIndex} variant="outline">
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
                   </Card>
                 </div>
 
@@ -89,7 +165,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

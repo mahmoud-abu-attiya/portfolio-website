@@ -1,58 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Code2, Layers, Database, PenTool, GitBranch, Terminal, Globe, Cpu, Palette, LayoutGrid } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 const Skills = () => {
+  const t = useTranslations("Skills")
 
   const skillCategories = [
     {
-      title: "Frontend",
+      title: t("categories.frontend"),
       icon: <Code2 className="h-6 w-6" />,
       skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Redux"],
     },
     {
-      title: "UI Frameworks",
+      title: t("categories.ui_frameworks"),
       icon: <Layers className="h-6 w-6" />,
       skills: ["Material UI", "Tailwind CSS", "Bootstrap", "Shadcn UI"],
     },
-    // {
-    //   title: "Backend",
-    //   icon: <Database className="h-6 w-6" />,
-    //   skills: ["Node.js", "Express", "MongoDB", "Firebase", "REST API", "GraphQL"],
-    // },
     {
-      title: "Tools",
+      title: t("categories.tools"),
       icon: <PenTool className="h-6 w-6" />,
       skills: ["VS Code", "Webpack", "Vite"],
     },
     {
-      title: "Version Control",
+      title: t("categories.version_control"),
       icon: <GitBranch className="h-6 w-6" />,
       skills: ["Git", "GitHub"],
     },
-    // {
-    //   title: "Testing",
-    //   icon: <Terminal className="h-6 w-6" />,
-    //   skills: ["Jest", "React Testing Library", "Cypress", "Playwright"],
-    // },
     {
-      title: "Internationalization",
+      title: t("categories.i18n"),
       icon: <Globe className="h-6 w-6" />,
       skills: ["i18next", "next-intl", "next-translate", "RTL Support"],
     },
     {
-      title: "Performance",
+      title: t("categories.performance"),
       icon: <Cpu className="h-6 w-6" />,
       skills: ["Lighthouse", "Web Vitals", "Code Splitting", "Lazy Loading"],
     },
     {
-      title: "Design",
+      title: t("categories.design"),
       icon: <Palette className="h-6 w-6" />,
-      skills: ["Responsive Design", "Mobile First", "UI/UX Principles", "Accessibility"],
+      skills: [t("items.responsive"), t("items.mobile_first"), t("items.ui_ux"), t("items.accessibility")],
     },
     {
-      title: "Architecture",
+      title: t("categories.architecture"),
       icon: <LayoutGrid className="h-6 w-6" />,
-      skills: ["Component Design", "State Management", "Clean Code", "Design Patterns"],
+      skills: [t("items.component_design"), t("items.state_management"), t("items.clean_code"), t("items.design_patterns")],
     },
   ]
 
@@ -60,7 +52,7 @@ const Skills = () => {
     <section id="skills" className="section-padding bg-muted">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-        Skills
+          {t("title")}
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
